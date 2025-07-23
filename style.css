@@ -534,6 +534,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 250px;
   margin: 1rem;
+  width: 18rem;
 }
 
 .card:hover {
@@ -548,13 +549,12 @@ body {
 
 }
 
-.card-body {
-  padding: 1rem;
-}
-
 .card-text {
-  font-size: 1rem;
-  color: #e9d5ff;
+  margin: 15px 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* Container responsivo centralizado */
@@ -562,4 +562,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+
+.card-body button {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  background-color: #374785;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+  cursor: pointer;
+  margin: 4px 2px 0 2px;
+}
+
+.card:hover .card-body button {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  display: inline-block; /* pode manter ou remover, pois opacity já controla a visibilidade */
 }
